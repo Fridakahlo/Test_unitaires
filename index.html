@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<lang="fr" >
+  <head>
+    <title>Formulaire d'identification</title>
+  </head>
+  <body>
+    <?php if(!empty($message)) : ?>
+      <p><?php echo $message; ?></p>
+    <?php endif; ?>
+    <form action="<?php echo htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES); ?>" method="post">
+      <fieldset>
+        <legend>Identifiants</legend>
+          <p>
+             <label for="first_name">First Name :</label> 
+            <input type="text" name="first_name" id="login" value="" required/>
+          </p>
+          <p>
+            <label for="last_name">Last Name :</label> 
+            <input type="text" name="last_name" id="last_name" value="" required/> 
+          </p>
+          <p>
+            <label for="birth_year">Birth Year :</label> 
+            <input type="text" name="birth_year" id="birth_year" value="" required/> 
+          </p>
+          <p>
+            <label for="comment">Comment :</label> 
+            <input type="text" name="comment" id="comment" value="" /> 
+          </p>
+          <p>
+            <input type="submit" name="submit" value="Identification" />
+          </p>
+      </fieldset>
+    </form>
+  </body>
+</html>
